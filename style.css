@@ -27,6 +27,7 @@ img {
    display: block;
    max-width: 100%;
    height: auto;
+   border-radius: 1em;
 }
 
 html {
@@ -36,15 +37,19 @@ html {
 /* General */
 
 body {
-   background-color: hsl(0, 0%, 100%);
+   background-color: hsl(31, 53%, 90%);
    min-height: 100vh;
    font-family: "Outfit", sans-serif;
    font-size: 1.125rem;
 }
 
 .container {
-   width: calc(95% - 1rem);
-   margin: 0 auto;
+   width: 98%;
+   max-width: 900px;
+   margin: 5em auto;
+   background-color: #fff;
+   padding: 2em;
+   border-radius: 2em;
 }
 
 h1 {
@@ -121,7 +126,7 @@ p {
 .instructions-section__list {
    margin: 1rem;
    line-height: 1.6rem;
-   color: var(--color-body`);
+   color: var(--color-body);
 }
 
 .instructions-section__listitem {
@@ -142,11 +147,19 @@ p {
    margin-block: 1rem;
 }
 
-.nutrition-section__nutrient-container {
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   gap: 1rem;
-   padding-left: 2rem;
+/* Nutrient Table */
+.nutrient-table {
+   border-collapse: collapse;
+   width: 100%;
+}
+
+.nutrient-table tr:not(:last-child) {
+   border-bottom: 2px solid var(--color-primary-400);
+}
+
+.nutrient-table td {
+   vertical-align: middle;
+   padding-block: .5em;
 }
 
 .nutrient-quantity {
